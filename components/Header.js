@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {
     SafeAreaView,
+    Text, StyleSheet,
 } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
