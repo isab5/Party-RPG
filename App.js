@@ -10,6 +10,7 @@ import {
   Alert,
 } from "react-native";
 import { StatusBar } from "expo-status-bar";
+import Header from "./components/Header";
 
 export default function App() {
   const [characters, setCharacters] = useState([
@@ -85,12 +86,7 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar style="dark" />
-      <Text style={styles.title}>🏰 Minha Party RPG</Text>
-      <Text style={styles.subtitle}>
-        ⭐ Recrutado • 💤 Disponível • Segure para remover
-      </Text>
-
+      <Header />
       <View style={styles.inputRow}>
         <TextInput
           style={styles.input}
