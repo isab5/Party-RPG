@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Text,
   TouchableOpacity,
@@ -8,29 +8,7 @@ import {
 } from "react-native";
 
 
-export default function CharacterCard() {
-    const [characters, setCharacters] = useState([
-        { id: 1, name: "🧙‍♂️ Gandalf o Mago", recruited: 0 },
-        { id: 2, name: "⚔️ Aragorn o Guerreiro", recruited: 1 },
-        { id: 3, name: "🏹 Legolas o Arqueiro", recruited: 0 },
-    ]);
-
-    const [newCharacter, setNewCharacter] = useState("");
-
-    function addCharacter() {
-        if (newCharacter.trim() === "") return;
-
-        const newId = characters.length > 0 ? Math.max(...characters.map(c => c.id)) + 1 : 1;
-
-        const newCharacterObj = {
-            id: newId,
-            name: newCharacter.trim(),
-            recruited: 0,
-        };
-
-        setCharacters([newCharacterObj, ...characters]);
-        setNewCharacter("");
-    }
+export default function CharacterCard({ characters, setCharacters }) {
 
     function toggleRecruit(character) {
         const updatedCharacters = characters.map((currentChar) =>
