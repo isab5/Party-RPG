@@ -6,6 +6,8 @@ import {
   StyleSheet,
   Alert,
 } from "react-native";
+import { FaStar } from 'react-icons/fa'; 
+import { GiNightSleep } from 'react-icons/gi';
 
 
 export default function CharacterCard({ characters, setCharacters }) {
@@ -30,9 +32,9 @@ export default function CharacterCard({ characters, setCharacters }) {
                 onPress={() => toggleRecruit(item)}
                 onLongPress={() => removeCharacter(item.id)}
             >
-                <Text style={{ color: "#E69A28" }}>{item.name}</Text>
-                <Text style={{ color: "#E69A28" }}>
-                    {item.recruited ? "⭐" : "💤"}
+                <Text style={{ color: "#BF8339" }}>{item.name}</Text>
+                <Text style={{ color: "#0D0D0D" }}>
+                    {item.recruited ? <FaStar size={18} color="#FFD700" /> : <GiNightSleep size={18} color="#3440afff" />}
                 </Text>
             </TouchableOpacity>
         );
@@ -74,7 +76,7 @@ const styles = StyleSheet.create({
         marginTop: 10,
     },
     character: {
-        backgroundColor: "#2C1810",
+        backgroundColor: "#F2B84B",
         padding: 15,
         borderRadius: 8,
         marginBottom: 10,
@@ -82,8 +84,8 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
     },
     characterRecruited: {
-        backgroundColor: "#58180D",
-        borderColor: "#E69A28",
+        backgroundColor: "#730E0E",
+        borderColor: "#F2B84B",
         borderWidth: 2,
     },
 });

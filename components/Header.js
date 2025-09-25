@@ -5,14 +5,17 @@ import {
 // import { SafeAreaView } from "react-native-safe-area-context";
 import { SafeAreaView } from "react-native";
 import { StatusBar } from "expo-status-bar";
+import { GiCastle } from 'react-icons/gi';
+import { FaStar } from 'react-icons/fa'; 
+import { GiNightSleep } from 'react-icons/gi';
 
 export default function Header() {
     return (
         <SafeAreaView style={styles.container}>
             <StatusBar style="dark" />
-            <Text style={styles.title}>🏰 Minha Party RPG</Text>
+            <Text style={styles.title}> <GiCastle size={40} color="#BF8339" /> Minha Party RPG</Text>
             <Text style={styles.subtitle}>
-                ⭐ Recrutado • 💤 Disponível • Segure para remover
+                <FaStar size={18} color="#FFD700" /> Recrutado • <GiNightSleep size={18} color="#6ab0f1ff" /> Disponível • Segure para remover
             </Text>
         </SafeAreaView>
     )
@@ -22,7 +25,7 @@ export default function Header() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#1A0E0A",
+        backgroundColor: "#0D0D0D",
         paddingTop: 50,
         paddingHorizontal: 20,
     },
@@ -30,12 +33,12 @@ const styles = StyleSheet.create({
         fontSize: 28,
         fontWeight: "bold",
         textAlign: "center",
-        color: "#E69A28",
+        color: "#F2B84B",
     },
     subtitle: {
         fontSize: 16,
         textAlign: "center",
-        color: "#E69A28",
+        color: "#F2B84B",
         marginBottom: 20,
     }
 });

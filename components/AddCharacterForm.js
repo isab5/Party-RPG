@@ -4,6 +4,8 @@ import { SafeAreaView } from "react-native";
 
 import { StatusBar } from "expo-status-bar";
 import { TextInput, TouchableOpacity, Text, StyleSheet } from "react-native";
+import { LuSwords } from 'react-icons/lu';
+import { FaMasksTheater } from 'react-icons/fa6';
 
 export default function AddCharacterForm({ characters, setCharacters }) {
   const [newCharacter, setNewCharacter] = useState("");
@@ -25,15 +27,16 @@ export default function AddCharacterForm({ characters, setCharacters }) {
   }
   return (
     <SafeAreaView style={styles.inputRow}>
+      <FaMasksTheater size={24} color="#BF8339" />
       <TextInput
         style={styles.input}
-        placeholder="🎭 Nome do novo personagem..."
+        placeholder="Nome do novo personagem..."
         value={newCharacter}
         onChangeText={setNewCharacter}
         onSubmitEditing={addCharacter}
       />
       <TouchableOpacity style={styles.button} onPress={addCharacter}>
-        <Text style={styles.buttonText}>⚔️</Text>
+        <Text style={styles.buttonText}>{<LuSwords size={24} color="#BF8339" />}</Text>
       </TouchableOpacity>
     </SafeAreaView>
   );
@@ -43,24 +46,25 @@ const styles = StyleSheet.create({
   inputRow: {
     flexDirection: "row",
     marginBottom: 20,
+    alignItems: "center",
   },
   input: {
     flex: 1,
     backgroundColor: "#2C1810",
-    color: "#E69A28",
+    color: "#BF8339",
     padding: 10,
     borderRadius: 8,
     marginRight: 10,
   },
   button: {
-    backgroundColor: "#58180D",
+    backgroundColor: "#730E0E",
     padding: 10,
     borderRadius: 8,
     justifyContent: "center",
     alignItems: "center",
   },
   buttonText: {
-    color: "#E69A28",
+    color: "#BF8339",
     fontSize: 18,
   },
 });
