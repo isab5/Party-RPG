@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-// import { SafeAreaView } from "react-native-safe-area-context";
 import { SafeAreaView } from "react-native";
-
 import { StatusBar } from "expo-status-bar";
 import { TextInput, TouchableOpacity, Text, StyleSheet } from "react-native";
-import { LuSwords } from 'react-icons/lu';
-import { FaMasksTheater } from 'react-icons/fa6';
+import { FontAwesome, MaterialIcons } from '@expo/vector-icons';
+import SuccessModal from "./SuccessModal";
 
 export default function AddCharacterForm({ characters, setCharacters }) {
   const [newCharacter, setNewCharacter] = useState("");
+  const [modalVisible, setModalVisible] = useState(false);
 
   function addCharacter() {
     if (newCharacter.trim() === "") return;
@@ -24,10 +23,12 @@ export default function AddCharacterForm({ characters, setCharacters }) {
 
     setCharacters([newCharacterObj, ...characters]);
     setNewCharacter("");
+    setModalVisible(true); 
   }
+
   return (
     <SafeAreaView style={styles.inputRow}>
-      <FaMasksTheater size={24} color="#BF8339" />
+      <MaterialIcons name="theater-comedy" size={24} color="#BF8339" />
       <TextInput
         style={styles.input}
         placeholder="Nome do novo personagem..."
@@ -36,8 +37,13 @@ export default function AddCharacterForm({ characters, setCharacters }) {
         onSubmitEditing={addCharacter}
       />
       <TouchableOpacity style={styles.button} onPress={addCharacter}>
-        <Text style={styles.buttonText}>{<LuSwords size={24} color="#BF8339" />}</Text>
+        <FontAwesome name="plus" size={24} color="#BF8339" />
       </TouchableOpacity>
+          <SuccessModal
+        visible={modalVisible}
+        onClose={() => setModalVisible(false)}
+        message="Personagem adicionado com sucesso!"
+      />
     </SafeAreaView>
   );
 }

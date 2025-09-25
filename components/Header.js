@@ -5,17 +5,15 @@ import {
 // import { SafeAreaView } from "react-native-safe-area-context";
 import { SafeAreaView } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import { GiCastle } from 'react-icons/gi';
-import { FaStar } from 'react-icons/fa'; 
-import { GiNightSleep } from 'react-icons/gi';
+import { FontAwesome, MaterialIcons } from '@expo/vector-icons';
 
 export default function Header() {
     return (
         <SafeAreaView style={styles.container}>
             <StatusBar style="dark" />
-            <Text style={styles.title}> <GiCastle size={40} color="#BF8339" /> Minha Party RPG</Text>
+            <Text style={styles.title}> <FontAwesome name="university" size={30} color="#BF8339" /> Minha Party RPG</Text>
             <Text style={styles.subtitle}>
-                <FaStar size={18} color="#FFD700" /> Recrutado • <GiNightSleep size={18} color="#6ab0f1ff" /> Disponível • Segure para remover
+                <FontAwesome name="star" size={20} color="#BF8339" /> Recrutado • <MaterialIcons name="bedtime" size={18} color="#6fa1fdff" /> Disponível • Segue para remover
             </Text>
         </SafeAreaView>
     )
