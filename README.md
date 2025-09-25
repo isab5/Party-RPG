@@ -190,7 +190,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ## 👥 Autoras
 
-**Ana** - [@souzabweatriz] (https://github.com/souzabweatriz)
+**Ana** - [@souzabweatriz](https://github.com/souzabweatriz)
 **Isabella** - [@isab5](https://github.com/isab5)
 
 ---
