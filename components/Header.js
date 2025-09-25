@@ -11,7 +11,7 @@ export default function Header() {
     return (
         <SafeAreaView style={styles.container}>
             <StatusBar style="dark" />
-            <Text style={styles.title}> <FontAwesome name="university" size={30} color="#BF8339" /> Minha Party RPG</Text>
+            <Text style={styles.title}> <MaterialIcons name="castle" size={30} color="#BF8339" /> Minha Party RPG</Text>
             <Text style={styles.subtitle}>
                 <FontAwesome name="star" size={20} color="#BF8339" /> Recrutado • <MaterialIcons name="bedtime" size={18} color="#6fa1fdff" /> Disponível • Segue para remover
             </Text>
