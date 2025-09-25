@@ -1,7 +1,6 @@
 # 🎭 Party RPG - Gerenciador de Personagens
 
 <div align="center">
-  <img src="./assets/icon.png" alt="Party RPG Logo" width="120" height="120">
   
   ![React Native](https://img.shields.io/badge/React_Native-0.81.4-61DAFB.svg)
   ![Expo](https://img.shields.io/badge/Expo-~54.0.1-000020.svg)
