@@ -102,6 +102,7 @@ Party-RPG/
 4. **Teste no dispositivo**
    - Escaneie o QR Code com o app Expo Go
    - Ou execute no emulador Android/iOS
+   - https://expo.dev/artifacts/eas/c3gyXTK2Rg9uG12rCs5jig.apk
 
 ## 📋 Como Usar
 
